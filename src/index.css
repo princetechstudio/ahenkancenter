@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #1a5632;
+  --color-primary-dark: #0f3d22;
+  --color-primary-light: #2d7a4a;
+  --color-accent: #84cc16;
+  --color-accent-dark: #65a30d;
+  --color-accent-light: #a3e635;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a5632 #f0fdf4;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f8fafc;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #1a5632 0%, #2d7a4a 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #65a30d 0%, #84cc16 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.sidebar-shadow {
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
+}
